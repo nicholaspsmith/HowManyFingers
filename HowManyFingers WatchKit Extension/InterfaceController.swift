@@ -17,7 +17,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var resultLbl: WKInterfaceLabel!
     
     @IBAction func sliderChanged(value: Float) {
-        
+        userGuessesLbl.setText("Your guess: \(Int(value * 5))")
     }
     
     @IBAction func guessPressed() {
