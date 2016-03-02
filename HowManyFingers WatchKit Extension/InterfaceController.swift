@@ -11,16 +11,31 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    var guessNumber: Int = 3
 
     @IBOutlet var slider: WKInterfaceSlider!
     @IBOutlet var userGuessesLbl: WKInterfaceLabel!
     @IBOutlet var resultLbl: WKInterfaceLabel!
     
     @IBAction func sliderChanged(value: Float) {
-        userGuessesLbl.setText("Your guess: \(Int(value * 5))")
+        guessNumber = Int(value * 5)
+        userGuessesLbl.setText("Your guess: \(guessNumber)")
     }
     
     @IBAction func guessPressed() {
+        
+        let randomNumber = Int(arc4random_uniform(6))
+
+        
+        if guessNumber == randomNumber {
+            resultLbl.setText("You got it!")
+        } else if guessNumber < randomNumber {
+            resultLbl.setText("Too low, it was \(randomNumber)")
+        } else {
+            resultLbl.setText("Too high, it was \(randomNumber)")
+        }
+
     }
     
     override func awakeWithContext(context: AnyObject?) {

@@ -22,7 +22,7 @@
                                 <action selector="guessPressed" destination="AgC-eL-Hgc" id="TmO-Fp-OXS"/>
                             </connections>
                         </button>
-                        <label width="136" alignment="left" text="Label" textAlignment="center" id="aNG-oF-3Pi"/>
+                        <label width="136" alignment="left" text="Guess a number" textAlignment="center" minimumScaleFactor="0.40000000000000002" id="aNG-oF-3Pi"/>
                     </items>
                     <connections>
                         <outlet property="resultLbl" destination="aNG-oF-3Pi" id="uKv-DG-7Ry"/>
