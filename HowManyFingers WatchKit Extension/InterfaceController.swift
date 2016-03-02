@@ -12,6 +12,17 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var slider: WKInterfaceSlider!
+    @IBOutlet var userGuessesLbl: WKInterfaceLabel!
+    @IBOutlet var resultLbl: WKInterfaceLabel!
+    
+    @IBAction func sliderChanged(value: Float) {
+        
+    }
+    
+    @IBAction func guessPressed() {
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

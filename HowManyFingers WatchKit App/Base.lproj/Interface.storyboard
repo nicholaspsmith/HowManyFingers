@@ -10,13 +10,25 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HowManyFingers_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="RnC-9M-xXb"/>
+                        <slider width="1" alignment="left" value="0.59999999999999998" steps="5" id="RnC-9M-xXb">
+                            <connections>
+                                <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="7ef-DV-HZa"/>
+                            </connections>
+                        </slider>
                         <label width="133.5" alignment="left" text="Your guess: 3" textAlignment="center" id="vdD-Yp-xkB"/>
-                        <button width="1" alignment="left" title="Button" id="m9U-tP-XI7">
+                        <button width="1" alignment="left" title="Guess" id="m9U-tP-XI7">
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="guessPressed" destination="AgC-eL-Hgc" id="TmO-Fp-OXS"/>
+                            </connections>
                         </button>
                         <label width="136" alignment="left" text="Label" textAlignment="center" id="aNG-oF-3Pi"/>
                     </items>
+                    <connections>
+                        <outlet property="resultLbl" destination="aNG-oF-3Pi" id="uKv-DG-7Ry"/>
+                        <outlet property="slider" destination="RnC-9M-xXb" id="jDK-de-tR9"/>
+                        <outlet property="userGuessesLbl" destination="vdD-Yp-xkB" id="Hbe-1R-rYq"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
